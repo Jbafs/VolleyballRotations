@@ -150,7 +150,7 @@ public class CourtController {
         //                    y = depth (0=near net, 1=back line)
         //
         // Home faces right (left half):
-        //   pixelX = pad + (1 - y) * halfCourtW   ← y=0 at net = rightmost of home half
+        //   pixelX = pad + (1 - y) * halfCourtW   ← b = rightmost of home half
         //   pixelY = pad + x * courtH
         //
         // Away faces left / mirrored (right half):
@@ -159,14 +159,14 @@ public class CourtController {
 
         if (homeState != null) {
             for (Position p : homeState.positionList()) {
-                double px = pad + (1.0 - p.getYPos()) * halfCourtW;
+                double px = pad + p.getYPos() * halfCourtW;
                 double py = pad + p.getXPos() * courtH;
                 courtPane.getChildren().add(makeToken(p, px, py, homeColor));
             }
         }
         if (awayState != null) {
             for (Position p : awayState.positionList()) {
-                double px = half + p.getYPos() * halfCourtW;
+                double px = half + (1.0 - p.getYPos()) * halfCourtW;
                 double py = pad + (1.0 - p.getXPos()) * courtH;
                 courtPane.getChildren().add(makeToken(p, px, py, awayColor));
             }
