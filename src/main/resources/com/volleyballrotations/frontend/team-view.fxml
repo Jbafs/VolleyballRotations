@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="12" style="-fx-padding: 16;"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.volleyballrotations.frontend.controllers.TeamController">
+
+    <HBox spacing="8" alignment="CENTER_LEFT">
+        <Label text="Team Name:"/>
+        <TextField fx:id="teamNameField" HBox.hgrow="ALWAYS"/>
+        <Button text="Rename" onAction="#onRename"/>
+    </HBox>
+
+    <Label text="Roster" style="-fx-font-weight: bold;"/>
+    <TableView fx:id="rosterTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="numberCol" text="#" prefWidth="50"/>
+            <TableColumn fx:id="nameCol"   text="Name" prefWidth="160"/>
+            <TableColumn fx:id="posCol"    text="Default Position" prefWidth="130"/>
+        </columns>
+        <placeholder><Label text="No players yet — add one below"/></placeholder>
+    </TableView>
+
+    <HBox spacing="8">
+        <TextField fx:id="addName"   promptText="Name"     HBox.hgrow="ALWAYS"/>
+        <TextField fx:id="addNumber" promptText="#"        prefWidth="55"/>
+        <TextField fx:id="addPos"    promptText="Position" prefWidth="110"/>
+        <Button text="Add"    onAction="#onAddPlayer"/>
+        <Button text="Remove" onAction="#onRemovePlayer"/>
+    </HBox>
+
+</VBox>

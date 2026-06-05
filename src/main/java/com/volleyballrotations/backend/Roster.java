@@ -15,4 +15,8 @@ public class Roster {
     }
 
     public ObservableList<Player> playerList(){ return players; }
+
+    public void addPlayer(String n, int num, String def){
+        players.add(new Player(n,num,def));
+    }
 }

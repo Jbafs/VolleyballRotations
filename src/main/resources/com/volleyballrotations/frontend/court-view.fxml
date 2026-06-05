@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.volleyballrotations.frontend.controllers.CourtController">
+    <left>
+        <VBox spacing="8" style="-fx-padding: 8; -fx-pref-width: 160;">
+            <Label text="Rotation" style="-fx-font-weight: bold;"/>
+            <ListView fx:id="rotationList" VBox.vgrow="ALWAYS"/>
+            <Label text="State" style="-fx-font-weight: bold;"/>
+            <ListView fx:id="stateList" VBox.vgrow="ALWAYS"/>
+            <Button text="Add State" onAction="#onAddState" maxWidth="Infinity"/>
+        </VBox>
+    </left>
+    <center>
+        <Pane fx:id="courtPane" style="-fx-background-color: #4a7c59;"/>
+    </center>
+</BorderPane>

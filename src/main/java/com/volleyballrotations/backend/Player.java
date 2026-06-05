@@ -25,6 +25,12 @@ public class Player extends Identifiable{
         defaultPos.set(def);
     }
 
+    /**Ui binds */
+    public StringProperty nameProperty(){ return name; }
+    public IntegerProperty numberProperty(){ return number; };
+    public StringProperty defaultPosProperty(){ return defaultPos; }
+
+    /**Getters and setters */
     public int    getNumber()       { return number.get(); }
     public void   setNumber(int v)  { number.set(v); }
     public String getName()         { return name.get(); }

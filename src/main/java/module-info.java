@@ -6,5 +6,8 @@ module com.example.volleyballrotations {
 
 
     opens com.volleyballrotations.frontend to javafx.fxml;
+    opens com.volleyballrotations.backend to javafx.fxml;
+    exports com.volleyballrotations.backend;
     exports com.volleyballrotations.frontend;
+    opens com.volleyballrotations.frontend.controllers to javafx.fxml;
 }

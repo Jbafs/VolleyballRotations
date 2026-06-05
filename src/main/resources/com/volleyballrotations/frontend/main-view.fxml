@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.volleyballrotations.frontend.controllers.MainController">
+    <left>
+        <VBox spacing="8" style="-fx-padding: 8; -fx-pref-width: 180;">
+            <Label text="Teams"/>
+            <ListView fx:id="teamList" VBox.vgrow="ALWAYS"/>
+            <Label text="Lineups"/>
+            <ListView fx:id="lineupList" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </left>
+    <center>
+        <StackPane fx:id="centerPane"/>
+    </center>
+</BorderPane>
