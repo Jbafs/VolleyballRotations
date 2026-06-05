@@ -6,14 +6,23 @@
             fx:controller="com.volleyballrotations.frontend.controllers.CourtController">
     <left>
         <VBox spacing="8" style="-fx-padding: 8; -fx-pref-width: 160;">
-            <Label text="Rotation" style="-fx-font-weight: bold;"/>
-            <ListView fx:id="rotationList" VBox.vgrow="ALWAYS"/>
-            <Label text="State" style="-fx-font-weight: bold;"/>
-            <ListView fx:id="stateList" VBox.vgrow="ALWAYS"/>
-            <Button text="Add State" onAction="#onAddState" maxWidth="Infinity"/>
+            <Label text="Home Rotation" style="-fx-font-weight: bold;"/>
+            <ListView fx:id="homeRotationList" VBox.vgrow="ALWAYS"/>
+            <Label text="Home State" style="-fx-font-weight: bold;"/>
+            <ListView fx:id="homeStateList" VBox.vgrow="ALWAYS"/>
+            <Button text="Add State" onAction="#onAddStateHome" maxWidth="Infinity"/>
         </VBox>
     </left>
     <center>
         <Pane fx:id="courtPane" style="-fx-background-color: #4a7c59;"/>
     </center>
+    <right>
+        <VBox spacing="8" style="-fx-padding: 8; -fx-pref-width: 160;">
+            <Label text="Away Rotation" style="-fx-font-weight: bold;"/>
+            <ListView fx:id="awayRotationList" VBox.vgrow="ALWAYS"/>
+            <Label text="Away State" style="-fx-font-weight: bold;"/>
+            <ListView fx:id="awayStateList" VBox.vgrow="ALWAYS"/>
+            <Button text="Add State" onAction="#onAddStateAway" maxWidth="Infinity"/>
+        </VBox>
+    </right>
 </BorderPane>

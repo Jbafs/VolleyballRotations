@@ -4,15 +4,30 @@
 
 <BorderPane xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.volleyballrotations.frontend.controllers.MainController">
+    <top>
+        <HBox spacing="8" style="-fx-padding: 8; -fx-background-color: #e0e0e0;">
+            <Button text="Save"       onAction="#onSave"/>
+            <Button text="Add Team"   onAction="#onAddTeam"/>
+            <Button text="Add Lineup" onAction="#onAddLineup"/>
+        </HBox>
+    </top>
     <left>
         <VBox spacing="8" style="-fx-padding: 8; -fx-pref-width: 180;">
-            <Label text="Teams"/>
+            <Label text="Home Teams" style="-fx-font-weight: bold;"/>
             <ListView fx:id="teamList" VBox.vgrow="ALWAYS"/>
-            <Label text="Lineups"/>
+            <Label text="Lineups" style="-fx-font-weight: bold;"/>
             <ListView fx:id="lineupList" VBox.vgrow="ALWAYS"/>
         </VBox>
     </left>
     <center>
         <StackPane fx:id="centerPane"/>
     </center>
+    <right>
+        <VBox spacing="8" style="-fx-padding: 8; -fx-pref-width: 180;">
+            <Label text="Away Teams" style="-fx-font-weight: bold;"/>
+            <ListView fx:id="awayTeamList" VBox.vgrow="ALWAYS"/>
+            <Label text="Away Lineup" style="-fx-font-weight: bold;"/>
+            <ListView fx:id="awayLineupList" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </right>
 </BorderPane>

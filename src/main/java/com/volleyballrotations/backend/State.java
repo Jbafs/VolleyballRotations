@@ -15,7 +15,7 @@ public class State extends Identifiable{
     private final StringProperty name   = new SimpleStringProperty("");
     private final List<Position> positions = new ArrayList<>(6);
 
-    private static final double[][] defaults = {{5/6,1.0/3},{5/6,5.0/6},{.5, 5.0/6},
+    private static final double[][] defaults = {{5.0/6,1.0/3},{5.0/6,5.0/6},{.5, 5.0/6},
             {1.0/6,5.0/6},{1.0/6,1.0/3},{.5,1.0/3}};
 
     /**

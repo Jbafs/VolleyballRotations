@@ -12,6 +12,11 @@
         <Button text="Rename" onAction="#onRename"/>
     </HBox>
 
+    <HBox spacing="8" alignment="CENTER_LEFT">
+        <Label text="Team Color:"/>
+        <ColorPicker fx:id="colorPicker" onAction="#onColorChange"/>
+    </HBox>
+
     <Label text="Roster" style="-fx-font-weight: bold;"/>
     <TableView fx:id="rosterTable" VBox.vgrow="ALWAYS">
         <columns>

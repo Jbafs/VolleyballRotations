@@ -3,6 +3,7 @@ module com.example.volleyballrotations {
     requires javafx.fxml;
     requires javafx.base;
     requires java.desktop;
+    requires com.google.gson;
 
 
     opens com.volleyballrotations.frontend to javafx.fxml;
