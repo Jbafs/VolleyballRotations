@@ -7,12 +7,17 @@ import java.io.*;
 import java.nio.file.*;
 import java.util.*;
 
+/**
+ * Handles JSON serialization and deserialization of the entire League to/from the user's home directory.
+ */
 public class DataManager {
+    /** Path to the persistent save file ({@code ~/volleyball_rotations.json}). */
     private static final Path SAVE_FILE =
             Path.of(System.getProperty("user.home"), "volleyball_rotations.json");
 
     // ── Save ─────────────────────────────────────────────────────────────────
 
+    /** Serializes the entire league to the save file, overwriting any previous data. */
     public static void save(League league) throws IOException {
         JsonObject root = new JsonObject();
         JsonArray teamsArr = new JsonArray();

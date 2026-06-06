@@ -6,7 +6,8 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
- * Pure data for one player marker on the court. (Modded by claude to cut the fat) (modded further by me to use Player)
+ * Pure data for one player marker on the court: normalized (x, y) coordinates, the assigned player,
+ * and the tactical role label shown in that spot. (Modded by claude to cut the fat) (modded further by me to use Player)
  */
 public class Position {
     private final DoubleProperty xPos = new SimpleDoubleProperty();
@@ -26,7 +27,8 @@ public class Position {
     // --- Property accessors: the UI binds to THESE ---
     public DoubleProperty xPosProperty()        { return xPos; }
     public DoubleProperty yPosProperty()        { return yPos; }
-    public Player getPlayer() { return player; }
+    public Player getPlayer()          { return player; }
+    public void   setPlayer(Player p)  { player = p; }
     public StringProperty positionNameProperty(){ return positionName; }
 
     // --- Plain getters / setters for everyday use ---

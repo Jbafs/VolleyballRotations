@@ -5,9 +5,13 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
+/**
+ * Represents a single volleyball player with a jersey number, name, and default position label.
+ */
 public class Player extends Identifiable{
     private final IntegerProperty number = new SimpleIntegerProperty();
     private final StringProperty name   = new SimpleStringProperty("");
+    /** The player's preferred/default playing position (e.g. "S", "L", "OH"). */
     private final StringProperty defaultPos   = new SimpleStringProperty("");
 
     // new player → generate an id

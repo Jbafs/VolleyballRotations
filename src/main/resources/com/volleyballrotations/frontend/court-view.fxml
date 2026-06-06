@@ -4,25 +4,43 @@
 
 <BorderPane xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.volleyballrotations.frontend.controllers.CourtController">
+    <top>
+        <HBox spacing="8" style="-fx-padding: 6 8; -fx-background-color: #333; -fx-alignment: center-left;">
+            <ToggleButton fx:id="zoneToggle"         text="Zone"     onAction="#onRedraw"/>
+            <ToggleButton fx:id="showNamesToggle"    text="Names"    onAction="#onRedraw"/>
+            <ToggleButton fx:id="showRolesToggle"    text="Roles"    onAction="#onRedraw"/>
+            <ToggleButton fx:id="showRotationToggle" text="Rotation" onAction="#onRedraw"/>
+            <Label text="Size:" style="-fx-text-fill: white;"/>
+            <Slider fx:id="radiusSlider" min="10" max="35" value="20" prefWidth="100" showTickMarks="false"/>
+        </HBox>
+    </top>
     <left>
         <VBox spacing="8" style="-fx-padding: 8; -fx-pref-width: 160;">
             <Label text="Home Rotation" style="-fx-font-weight: bold;"/>
             <ListView fx:id="homeRotationList" VBox.vgrow="ALWAYS"/>
             <Label text="Home State" style="-fx-font-weight: bold;"/>
+            <TextField fx:id="homeStateNameField" promptText="State name"/>
             <ListView fx:id="homeStateList" VBox.vgrow="ALWAYS"/>
-            <Button text="Add State" onAction="#onAddStateHome" maxWidth="Infinity"/>
+            <Button text="Add State"       onAction="#onAddStateHome"    maxWidth="Infinity"/>
+            <Button text="Delete State"    onAction="#onDeleteStateHome"  maxWidth="Infinity"/>
+            <Button text="Copy to Away →"  onAction="#onCopyHomeToAway"  maxWidth="Infinity"/>
         </VBox>
     </left>
     <center>
-        <Pane fx:id="courtPane" style="-fx-background-color: #4a7c59;"/>
+        <StackPane fx:id="courtContainer">
+            <Pane fx:id="courtPane" style="-fx-background-color: #4a7c59;"/>
+        </StackPane>
     </center>
     <right>
         <VBox spacing="8" style="-fx-padding: 8; -fx-pref-width: 160;">
             <Label text="Away Rotation" style="-fx-font-weight: bold;"/>
             <ListView fx:id="awayRotationList" VBox.vgrow="ALWAYS"/>
             <Label text="Away State" style="-fx-font-weight: bold;"/>
+            <TextField fx:id="awayStateNameField" promptText="State name"/>
             <ListView fx:id="awayStateList" VBox.vgrow="ALWAYS"/>
-            <Button text="Add State" onAction="#onAddStateAway" maxWidth="Infinity"/>
+            <Button text="Add State"       onAction="#onAddStateAway"    maxWidth="Infinity"/>
+            <Button text="Delete State"    onAction="#onDeleteStateAway"  maxWidth="Infinity"/>
+            <Button text="← Copy to Home"  onAction="#onCopyAwayToHome"  maxWidth="Infinity"/>
         </VBox>
     </right>
 </BorderPane>

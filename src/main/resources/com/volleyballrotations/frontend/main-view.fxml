@@ -17,6 +17,8 @@
             <ListView fx:id="teamList" VBox.vgrow="ALWAYS"/>
             <Label text="Lineups" style="-fx-font-weight: bold;"/>
             <ListView fx:id="lineupList" VBox.vgrow="ALWAYS"/>
+            <TextField fx:id="lineupNameField" promptText="Lineup name"/>
+            <Button text="Remove Lineup" onAction="#onRemoveLineup" maxWidth="Infinity"/>
         </VBox>
     </left>
     <center>

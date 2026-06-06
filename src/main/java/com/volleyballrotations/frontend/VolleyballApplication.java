@@ -10,6 +10,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * JavaFX Application subclass that loads or initializes the League, wires up the main scene,
+ * and auto-saves on window close.
+ */
 public class VolleyballApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {

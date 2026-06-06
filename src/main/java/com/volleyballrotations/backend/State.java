@@ -8,20 +8,23 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
- * Coordinate system works on the x axis being 0-2 and the y axis being 0-1
- * (as the 1:1 ratio of one half of the volleyball court)
+ * A named snapshot of all six player positions on the court for a given rotation.
+ *
+ * <p>Coordinate system: both x and y are 0–1, representing one half of the court (1:1 ratio).
+ * x = sideline-to-sideline (0=left, 1=right from the team's perspective)
+ * y = depth (0=near net, 1=back line)
  */
 public class State extends Identifiable{
     private final StringProperty name   = new SimpleStringProperty("");
     private final List<Position> positions = new ArrayList<>(6);
 
+    /** Default (x, y) court coordinates for each of the six rotation slots. */
     private static final double[][] defaults = {{5.0/6,1.0/3},{5.0/6,5.0/6},{.5, 5.0/6},
             {1.0/6,5.0/6},{1.0/6,1.0/3},{.5,1.0/3}};
 
     /**
-     * Default rotation
-     * @param rot - current rotation
-     * @param players - players in starting order
+     * Builds a default state by rotating the player array so that player at index {@code rot}
+     * becomes position 1, then places each player at the standard default court coordinates.
      */
     public State(int rot, Player[] players){
         name.set("Default");
@@ -34,6 +37,7 @@ public class State extends Identifiable{
             positions.add(new Position(defaults[i][0], defaults[i][1], curRot[i], curRot[i].getPos()));
     }
 
+    /** Creates a state from a known ID, name, and pre-built positions (used when loading saved data). */
     public State(String id, String name, Position... pos){
         super(id);
         this.name.set(name);
@@ -43,6 +47,7 @@ public class State extends Identifiable{
     /**Ui binds */
     public StringProperty nameProperty(){ return name; }
 
+    /** Returns a deep copy of this state with a new ID and " Copy" appended to the name. */
     public State copy() {
         return new State(UUID.randomUUID().toString(), getName() + " Copy",
             positions.stream().map(Position::copy).toArray(Position[]::new));
