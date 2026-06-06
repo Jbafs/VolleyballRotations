@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25bdf38f-a566-427b-bc3c-f5e1cc894ec2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/awsToolkit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.claude/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.claude/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/volleyballrotations/backend/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volleyballrotations/backend/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/volleyballrotations/backend/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volleyballrotations/backend/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/volleyballrotations/frontend/controllers/CourtController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volleyballrotations/frontend/controllers/CourtController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/volleyballrotations/frontend/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volleyballrotations/frontend/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/volleyballrotations/frontend/controllers/TeamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volleyballrotations/frontend/controllers/TeamController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/volleyballrotations/frontend/court-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/volleyballrotations/frontend/court-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/volleyballrotations/frontend/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/volleyballrotations/frontend/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
